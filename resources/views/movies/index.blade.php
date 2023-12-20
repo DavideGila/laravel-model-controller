@@ -8,11 +8,10 @@
         @foreach ($movies as $movie)
         <div class="col-3 gy-4">
             <div class="card">
-                <img src="{{$movie->image}}" class="card-img-top" alt="">
+                <img src="{{$movie->image}}" class="card-img-top" alt="{{$movie->title}}">
                 <div class="card-body">
                   <h5 class="card-title">{{$movie->title}}</h5>
-                  <p class="card-text">{{$movie->plot}}</p>
-                  <a href="{{route('movies.show', $movie->id)}}" class="btn btn-primary">Go somewhere</a>
+                  <a href="{{route('movies.show', $movie->id)}}" class="btn btn-primary">More info</a>
                 </div>
             </div>
         </div>
